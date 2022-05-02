@@ -1,0 +1,7 @@
+endpoints:
+  individual:
+    name: individualClient
+    protocol: https
+    host: host de uat
+    port: porta de uat
+    url: ${endpoints.individual.protocol}://${endpoints.individual.host}:${endpoints.individual.port}

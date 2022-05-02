@@ -1,0 +1,7 @@
+endpoints:
+  individual:
+    name: individualClient
+    protocol: http
+    host: localhost
+    port: 8080
+    url: ${endpoints.individual.protocol}://${endpoints.individual.host}:${endpoints.individual.port}

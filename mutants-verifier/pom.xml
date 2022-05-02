@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>solution</module>
+        <module>clients/web-client</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.4</version>
+        <relativePath />
+    </parent>
+
+    <groupId>br.gov.mutants.verifier</groupId>
+    <artifactId>mutants</artifactId>
+    <version>0.1</version>
+    <name>mutants</name>
+    <description>Project to verify mutant DNA</description>
+    <url>https://github.com/emanuelvictor/mutants</url>
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <active.profile>dev</active.profile>
+                <!-- production connection-->
+                <MUTANTS_VERIFIER_JDBC_DATABASE_URL>jdbc:postgresql://localhost:5432/mutants</MUTANTS_VERIFIER_JDBC_DATABASE_URL>
+                <MUTANTS_VERIFIER_JDBC_DATABASE_USERNAME>mutants</MUTANTS_VERIFIER_JDBC_DATABASE_USERNAME>
+                <MUTANTS_VERIFIER_JDBC_DATABASE_PASSWORD>mutants</MUTANTS_VERIFIER_JDBC_DATABASE_PASSWORD>
+                <!-- test connection-->
+                <MUTANTS_VERIFIER_TEST_JDBC_DATABASE_URL>jdbc:postgresql://localhost:5432/mutants_test</MUTANTS_VERIFIER_TEST_JDBC_DATABASE_URL>
+                <MUTANTS_VERIFIER_TEST_JDBC_DATABASE_USERNAME>mutants</MUTANTS_VERIFIER_TEST_JDBC_DATABASE_USERNAME>
+                <MUTANTS_VERIFIER_TEST_JDBC_DATABASE_PASSWORD>mutants</MUTANTS_VERIFIER_TEST_JDBC_DATABASE_PASSWORD>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>sit</id>
+            <properties>
+                <active.profile>sit</active.profile>
+                <!-- Insert below the information of the production connection-->
+                <!-- Insert below the information of the test connection-->
+            </properties>
+        </profile>
+
+        <profile>
+            <id>uat</id>
+            <properties>
+                <active.profile>uat</active.profile>
+                <!-- Insert below the information of the production connection-->
+                <!-- Insert below the information of the test connection-->
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prd</id>
+            <properties>
+                <active.profile>prd</active.profile>
+                <!-- Insert below the information of the production connection-->
+                <!-- Insert below the information of the test connection-->
+            </properties>
+        </profile>
+
+    </profiles>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Emanuel Victor</name>
+            <email>emanuel.info@gmail.com</email>
+            <organization>Emanuel Victor</organization>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/emanuelvictor/mutants.git</connection>
+        <developerConnection>scm:git:ssh://github.com:emanuelvictor/mutants.git
+        </developerConnection>
+        <url>http://github.com/emanuelvictor/mutants/tree/integration-test</url>
+        <tag>mutants-0.1</tag>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>local-snapshots</id>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>local-releases</id>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+
+</project>

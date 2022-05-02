@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>br.gov.mutants.verifier</groupId>
+        <artifactId>mutants</artifactId>
+        <version>0.1</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>mutants-web-client</artifactId>
+    <name>mutants-web-client</name>
+    <description>Webclient to mutant DNA verifier</description>
+    <packaging>jar</packaging>
+
+    <properties>
+        <spring-boot-starter-webflux.version>2.6.7</spring-boot-starter-webflux.version>
+        <commons.version>0.11</commons.version>
+    </properties>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+            <version>${spring-boot-starter-webflux.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <active.profile>dev-mutants-verifier-client</active.profile>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>sit</id>
+            <properties>
+                <active.profile>sit-mutants-verifier-client</active.profile>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>uat</id>
+            <properties>
+                <active.profile>uat-mutants-verifier-client</active.profile>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prd</id>
+            <properties>
+                <active.profile>prd-mutants-verifier-client</active.profile>
+            </properties>
+        </profile>
+
+    </profiles>
+
+</project>

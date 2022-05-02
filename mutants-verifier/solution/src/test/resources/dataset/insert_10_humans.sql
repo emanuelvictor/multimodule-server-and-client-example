@@ -1,0 +1,10 @@
+insert into individual (mutant, signature) values (false, 'AGGTAG;TATAAC;GGTTTA;GGGAGC;ATCACC;GTATAa');
+insert into individual (mutant, signature) values (false, 'AGGTAG;TATAAC;GGTTTA;GGGAGC;ATCACC;GTATAc');
+insert into individual (mutant, signature) values (false, 'AGGTAG;TATAAC;GGTTTA;GGGAGC;ATCACC;GTATAG');
+insert into individual (mutant, signature) values (false, 'AGGcAG;TATAAC;GGTTTA;GGGAGC;ATCACC;GTATAG');
+insert into individual (mutant, signature) values (false, 'AGGcAG;TATtAC;GGTTTA;GGGAGC;ATCACC;GTATAG');
+insert into individual (mutant, signature) values (false, 'AGGcAG;TATtAC;GGTTTA;GtGAGC;ATCACC;GTATAG');
+insert into individual (mutant, signature) values (false, 'AGGcAG;TATtAC;GGTTTA;GtGAGC;ATCAgC;GTATAG');
+insert into individual (mutant, signature) values (false, 'AGGcAG;TATtAC;GGTTTA;GtGAGC;ATCAgC;GTAAAG');
+insert into individual (mutant, signature) values (false, 'AGGcAG;TATtAC;GGTTTA;GtGAGC;ATCAgC;GTAAcG');
+insert into individual (mutant, signature) values (false, 'AGGcAG;TATtAC;GGTTTA;GtGAGC;ATCAgC;GcAAcG');
