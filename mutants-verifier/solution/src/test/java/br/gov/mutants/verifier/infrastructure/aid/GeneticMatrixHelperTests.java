@@ -1,8 +1,8 @@
 package br.gov.mutants.verifier.infrastructure.aid;
 
-import br.gov.mutants.verifier.application.api.dtos.IndividualDTO;
 import br.gov.mutants.verifier.application.api.mappers.IndividualMapper;
 import br.gov.mutants.verifier.application.api.mappers.IndividualMapperImpl;
+import br.gov.mutants.verifier.client.v1.dto.IndividualDTO;
 import br.gov.mutants.verifier.domain.entity.Individual;
 import br.gov.mutants.verifier.domain.logics.business.individual.SearchMutantGenesLogic;
 import br.gov.mutants.verifier.domain.logics.validation.individual.InvalidGeneValidation;

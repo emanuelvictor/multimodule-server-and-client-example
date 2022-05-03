@@ -1,8 +1,8 @@
 package br.gov.mutants.verifier.domain.service;
 
+import br.gov.mutants.verifier.client.v1.dto.IndividualDTO;
 import br.gov.mutants.verifier.client.v1.dto.StatsDTO;
 import br.gov.mutants.verifier.infrastructure.aid.GeneticMatrixHelper;
-import br.gov.mutants.verifier.application.api.dtos.IndividualDTO;
 import br.gov.mutants.verifier.application.api.mappers.IndividualMapper;
 import br.gov.mutants.verifier.domain.entity.Individual;
 import org.assertj.core.api.Assertions;

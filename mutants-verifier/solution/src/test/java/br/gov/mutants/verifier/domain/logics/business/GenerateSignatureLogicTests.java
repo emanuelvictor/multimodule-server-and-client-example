@@ -1,13 +1,13 @@
 package br.gov.mutants.verifier.domain.logics.business;
 
+import br.gov.mutants.verifier.client.v1.dto.IndividualDTO;
 import br.gov.mutants.verifier.domain.entity.Individual;
 import br.gov.mutants.verifier.infrastructure.aid.GeneticMatrixHelper;
-import br.gov.mutants.verifier.application.api.dtos.IndividualDTO;
 import br.gov.mutants.verifier.application.api.mappers.IndividualMapper;
 import br.gov.mutants.verifier.application.api.mappers.IndividualMapperImpl;
-import br.gov.mutants.verifier.domain.logics.business.individual.GenerateSignatureLogic;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import br.gov.mutants.verifier.domain.logics.business.individual.GenerateSignatureLogic;
 
 /**
  *

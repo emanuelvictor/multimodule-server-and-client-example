@@ -59,6 +59,6 @@ public class IndividualClient {
      */
     public Boolean mutant(final IndividualDTO individualDTO) {
         LOGGER.info("Post individual data");
-        return client.post().uri("stats").body(Mono.just(individualDTO), IndividualDTO.class).retrieve().bodyToMono(Boolean.class).block();
+        return client.post().uri("mutant").body(Mono.just(individualDTO), IndividualDTO.class).retrieve().bodyToMono(Boolean.class).block();
     }
 }

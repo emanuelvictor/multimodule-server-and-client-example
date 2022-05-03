@@ -1,8 +1,8 @@
 package br.gov.mutants.verifier.application.api.resource;
 
+import br.gov.mutants.verifier.client.v1.dto.IndividualDTO;
 import br.gov.mutants.verifier.client.v1.dto.StatsDTO;
 import br.gov.mutants.verifier.domain.service.IndividualService;
-import br.gov.mutants.verifier.application.api.dtos.IndividualDTO;
 import br.gov.mutants.verifier.application.api.mappers.IndividualMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

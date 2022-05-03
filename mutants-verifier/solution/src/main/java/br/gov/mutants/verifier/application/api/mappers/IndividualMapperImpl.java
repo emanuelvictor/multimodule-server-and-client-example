@@ -1,7 +1,7 @@
 package br.gov.mutants.verifier.application.api.mappers;
 
+import br.gov.mutants.verifier.client.v1.dto.IndividualDTO;
 import br.gov.mutants.verifier.domain.entity.Individual;
-import br.gov.mutants.verifier.application.api.dtos.IndividualDTO;
 import org.springframework.stereotype.Component;
 
 @Component
