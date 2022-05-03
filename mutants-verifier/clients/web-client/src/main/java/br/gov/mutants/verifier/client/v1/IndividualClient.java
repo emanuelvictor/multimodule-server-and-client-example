@@ -1,8 +1,9 @@
 package br.gov.mutants.verifier.client.v1;
 
 
-import br.gov.mutants.verifier.client.v1.dto.IndividualDTO;
-import br.gov.mutants.verifier.client.v1.dto.StatsDTO;
+import br.gov.mutants.verifier.commons.v1.IIndividualClient;
+import br.gov.mutants.verifier.commons.v1.dto.IndividualDTO;
+import br.gov.mutants.verifier.commons.v1.dto.StatsDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,12 +15,12 @@ import reactor.core.publisher.Mono;
  * {@link IndividualClient} is an implementation to verify if genetic matrix is a mutant or normal human (see in {@link IndividualClient#mutant(IndividualDTO)}).
  * Also return the instatistics of the verifications on the endpoint {@link IndividualClient#stats()}
  *
- * @author  Emanuel Victor
+ * @author Emanuel Victor
  * @version 1.0
- * @since   2022-04-29
+ * @since 2022-04-29
  */
 @Component
-public class IndividualClient {
+public class IndividualClient implements IIndividualClient {
 
     /**
      *
@@ -48,7 +49,7 @@ public class IndividualClient {
      */
     public StatsDTO stats() {
         LOGGER.info("Getting statistc data");
-        return client.get().uri("stats").retrieve().bodyToMono(StatsDTO.class).block();
+        return client.get().uri("v1/stats").retrieve().bodyToMono(StatsDTO.class).block();
     }
 
     /**
@@ -59,6 +60,6 @@ public class IndividualClient {
      */
     public Boolean mutant(final IndividualDTO individualDTO) {
         LOGGER.info("Post individual data");
-        return client.post().uri("mutant").body(Mono.just(individualDTO), IndividualDTO.class).retrieve().bodyToMono(Boolean.class).block();
+        return client.post().uri("v1/mutant").body(Mono.just(individualDTO), IndividualDTO.class).retrieve().bodyToMono(Boolean.class).block();
     }
 }

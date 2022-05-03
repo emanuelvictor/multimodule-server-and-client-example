@@ -4,8 +4,8 @@ package br.gov.mutants.verifier.application.api.resources;
 import br.gov.mutants.verifier.application.api.resource.IndividualResource;
 import br.gov.mutants.verifier.application.exceptions.GenesCannotBeNullExceptionInvalidException;
 import br.gov.mutants.verifier.application.i18n.MessageSourceHolder;
-import br.gov.mutants.verifier.client.v1.dto.IndividualDTO;
-import br.gov.mutants.verifier.client.v1.dto.StatsDTO;
+import br.gov.mutants.verifier.commons.v1.dto.IndividualDTO;
+import br.gov.mutants.verifier.commons.v1.dto.StatsDTO;
 import br.gov.mutants.verifier.infrastructure.aid.GeneticMatrixHelper;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -92,7 +92,7 @@ public class IndividualResourceTests {
     @Sql("/dataset/truncate.sql")
     public void postMutantToEndpointTest() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders
-                        .post("/mutant")
+                        .post("/v1/mutant")
                         .content(
                                 "{" +
                                         "\"dna\": [\"AGGTAGGTA\",\"GTAGTGTAA\",\"GGTTGTAGc\",\"GcGGAGGAG\",\"GTCGTAGAC\",\"GTcGGTATA\",\"GGTTGTAGT\",\"GcGTAGGcG\",\"GTCGTAGAg\"]" +
@@ -110,7 +110,7 @@ public class IndividualResourceTests {
     @Sql("/dataset/truncate.sql")
     public void postHumanToEndpointTest() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders
-                        .post("/mutant")
+                        .post("/v1/mutant")
                         .content(
                                 "{" +
                                         "\"dna\": [\"AGGTAG\",\"TATAAC\",\"GGTTTA\",\"GGGAGC\",\"ATCACC\",\"GTATAG\"]" +
@@ -128,7 +128,7 @@ public class IndividualResourceTests {
     public void postHumanWithInvalidGeneEndpointTest() throws Exception {
         final Exception exception = mockMvc.perform(
                         MockMvcRequestBuilders
-                                .post("/mutant")
+                                .post("/v1/mutant")
                                 .content(
                                         "{" +
                                                 "\"dna\": [\"AGGTAG\",\"TATAAC\",\"GGTTTA\",\"GGGAGC\",\"ATCACC\",\"GTATA1\"]" +
@@ -151,7 +151,7 @@ public class IndividualResourceTests {
 
         final Exception exception = mockMvc.perform(
                         MockMvcRequestBuilders
-                                .post("/mutant")
+                                .post("/v1/mutant")
                                 .content(
                                         "{}"
                                 )
@@ -177,7 +177,7 @@ public class IndividualResourceTests {
 
         mockMvc.perform(
                         MockMvcRequestBuilders
-                                .post("/mutant")
+                                .post("/v1/mutant")
                                 .content(jsonString)
                                 .contentType(MediaType.APPLICATION_JSON)
                 )
@@ -198,7 +198,7 @@ public class IndividualResourceTests {
 
         mockMvc.perform(
                         MockMvcRequestBuilders
-                                .post("/mutant")
+                                .post("/v1/mutant")
                                 .content(jsonString)
                                 .contentType(MediaType.APPLICATION_JSON)
                 )

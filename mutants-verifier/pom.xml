@@ -144,4 +144,14 @@
         </repository>
     </distributionManagement>
 
+    <repositories>
+        <repository>
+            <id>local-snapshots</id>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </repository>
+        <repository>
+            <id>local-releases</id>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+    </repositories>
 </project>

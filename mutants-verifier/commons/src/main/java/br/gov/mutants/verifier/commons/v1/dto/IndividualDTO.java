@@ -1,4 +1,4 @@
-package br.gov.mutants.verifier.client.v1.dto;
+package br.gov.mutants.verifier.commons.v1.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

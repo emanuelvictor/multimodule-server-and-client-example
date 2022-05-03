@@ -1,6 +1,6 @@
 package br.gov.mutants.verifier.domain.logics.business;
 
-import br.gov.mutants.verifier.client.v1.dto.IndividualDTO;
+import br.gov.mutants.verifier.commons.v1.dto.IndividualDTO;
 import br.gov.mutants.verifier.domain.entity.Individual;
 import br.gov.mutants.verifier.infrastructure.aid.GeneticMatrixHelper;
 import br.gov.mutants.verifier.application.api.mappers.IndividualMapper;

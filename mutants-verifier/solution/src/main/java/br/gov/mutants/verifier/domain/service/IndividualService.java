@@ -1,6 +1,6 @@
 package br.gov.mutants.verifier.domain.service;
 
-import br.gov.mutants.verifier.client.v1.dto.StatsDTO;
+import br.gov.mutants.verifier.commons.v1.dto.StatsDTO;
 import br.gov.mutants.verifier.domain.logics.business.IBusinessLogic;
 import br.gov.mutants.verifier.domain.entity.Individual;
 import br.gov.mutants.verifier.domain.logics.validation.IValidation;

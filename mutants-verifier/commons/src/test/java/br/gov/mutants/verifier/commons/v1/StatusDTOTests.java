@@ -1,6 +1,6 @@
-package br.gov.mutants.verifier.client.v1;
+package br.gov.mutants.verifier.commons.v1;
 
-import br.gov.mutants.verifier.client.v1.dto.StatsDTO;
+import br.gov.mutants.verifier.commons.v1.dto.StatsDTO;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

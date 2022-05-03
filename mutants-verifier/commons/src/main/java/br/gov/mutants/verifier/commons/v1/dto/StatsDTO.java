@@ -1,4 +1,4 @@
-package br.gov.mutants.verifier.client.v1.dto;
+package br.gov.mutants.verifier.commons.v1.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

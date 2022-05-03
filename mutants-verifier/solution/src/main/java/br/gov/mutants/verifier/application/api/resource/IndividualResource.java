@@ -1,7 +1,7 @@
 package br.gov.mutants.verifier.application.api.resource;
 
-import br.gov.mutants.verifier.client.v1.dto.IndividualDTO;
-import br.gov.mutants.verifier.client.v1.dto.StatsDTO;
+import br.gov.mutants.verifier.commons.v1.dto.IndividualDTO;
+import br.gov.mutants.verifier.commons.v1.dto.StatsDTO;
 import br.gov.mutants.verifier.domain.service.IndividualService;
 import br.gov.mutants.verifier.application.api.mappers.IndividualMapper;
 import lombok.RequiredArgsConstructor;
@@ -31,7 +31,7 @@ public class IndividualResource {
      * @param individualDTO IndividualDTO
      * @return boolean
      */
-    @PostMapping(value = "/mutant", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "v1/mutant", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> mutant(@RequestBody final IndividualDTO individualDTO) {
 
         final boolean isMutant = individualService.save(individualMapper.convert(individualDTO)).isMutant();
@@ -44,7 +44,7 @@ public class IndividualResource {
     /**
      * @return Object
      */
-    @GetMapping("stats")
+    @GetMapping("v1/stats")
     public StatsDTO stats() {
         return individualService.stats();
     }

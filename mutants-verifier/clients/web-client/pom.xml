@@ -25,6 +25,19 @@
             <version>${spring-boot-starter-webflux.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>br.gov.mutants.verifier</groupId>
+            <artifactId>mutants-commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>br.gov.mutants.verifier</groupId>
+            <artifactId>mutants-solution</artifactId>
+            <classifier>client-to-client</classifier>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <profiles>

@@ -1,8 +1,9 @@
-package br.gov.mutants.verifier.client.v1;
+package v1;
 
-import br.gov.mutants.verifier.application.exceptions.GenesCannotBeNullExceptionInvalidException;
-import br.gov.mutants.verifier.client.v1.dto.IndividualDTO;
-import br.gov.mutants.verifier.client.v1.dto.StatsDTO;
+import br.gov.mutants.verifier.MutantsSolutionApplication;
+import br.gov.mutants.verifier.client.v1.IndividualClient;
+import br.gov.mutants.verifier.commons.v1.dto.IndividualDTO;
+import br.gov.mutants.verifier.commons.v1.dto.StatsDTO;
 import br.gov.mutants.verifier.infrastructure.aid.GeneticMatrixHelper;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -14,7 +15,7 @@ import org.springframework.web.reactive.function.client.WebClientResponseExcepti
 
 import java.math.BigDecimal;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@SpringBootTest(classes = MutantsSolutionApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class IndividualClientTests {
 
     /**
