@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  mutants_db:
+    image: 'mutants_db'
+    build:
+      context: ./postgres/
+      dockerfile: ./Postgres.Dockerfile
+    container_name: mutants_db
+    ports:
+      - "5432:5432"
+
+  nexus3:
+    image: 'nexus3'
+    build:
+      context: ./nexus3/
+      dockerfile: ./Nexus3.Dockerfile
+    container_name: nexus3
+    ports:
+      - "8081:8081"
