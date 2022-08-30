@@ -9,10 +9,12 @@ import br.gov.mutants.verifier.infrastructure.aid.GeneticMatrixHelper;
 import br.gov.mutants.verifier.domain.logics.business.individual.SearchMutantGenesLogic;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 /**
  *
  */
+@SpringBootTest
 public class SearchMutantGenesLogicTests {
 
     /**

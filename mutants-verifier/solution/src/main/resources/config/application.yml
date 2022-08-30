@@ -6,9 +6,9 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: org.postgresql.Driver
     hikari.maximum-pool-size: 3
-    url: ${jdbc.database.url}
-    username: ${jdbc.database.username}
-    password: ${jdbc.database.password}
+    url: jdbc:postgresql://localhost:5432/mutants
+    username: mutants
+    password: mutants
 
   #JPA
   jpa:

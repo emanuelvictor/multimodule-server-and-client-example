@@ -100,7 +100,7 @@ public class SearchMutantGenesLogic implements IBusinessLogic<Individual> {
         // Course all sides of the matrix.
         for (int turn = 0; turn < 4; turn++) {
 
-            // Create a array only genetic matrix size minus 3, because Anything beyond that is not eligible to mutant gene.
+            // Create an array only genetic matrix size minus 3, because Anything beyond that is not eligible to mutant gene.
             final StringBuilder[] genes = new StringBuilder[geneticMatrix.length - (ELIGIBLE_MUTANT_GENE_LENGTH - (turn >= 2 ? 0 : 1))];
             // Initialize array
             for (int i = 0; i < genes.length; i++)

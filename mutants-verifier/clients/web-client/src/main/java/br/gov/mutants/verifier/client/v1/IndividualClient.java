@@ -43,7 +43,7 @@ public class IndividualClient implements IIndividualClient {
     }
 
     /**
-     * Return the statistcs of the individuals.
+     * Return the statistics of the individuals.
      *
      * @return {@link StatsDTO}
      */
