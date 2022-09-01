@@ -1,6 +1,6 @@
 package br.gov.mutants.verifier.domain.logics.validation.individual;
 
-import br.gov.mutants.verifier.application.exceptions.GenesCannotBeNullExceptionInvalidException;
+import br.gov.mutants.verifier.application.exceptions.GenesCannotBeNullExceptionInvalidException; //TODO coupling
 import br.gov.mutants.verifier.domain.entity.Individual;
 import br.gov.mutants.verifier.domain.logics.validation.IValidation;
 import lombok.RequiredArgsConstructor;

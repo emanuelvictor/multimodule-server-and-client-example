@@ -1,10 +1,10 @@
 package br.gov.mutants.verifier.domain.repository;
 
-import br.gov.mutants.verifier.commons.v1.dto.StatsDTO;
+import br.gov.mutants.verifier.commons.v1.dto.StatsDTO; //TODO coupling
 import br.gov.mutants.verifier.domain.entity.Individual;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository; //TODO coupling
+import org.springframework.data.jpa.repository.Query; //TODO coupling
+import org.springframework.stereotype.Repository; //TODO coupling
 
 @Repository
 public interface IndividualRepository extends JpaRepository<Individual, String> {

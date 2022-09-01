@@ -1,7 +1,7 @@
 package br.gov.mutants.verifier.domain.logics.business.individual;
 
-import br.gov.mutants.verifier.application.exceptions.InvalidMatrixException;
-import br.gov.mutants.verifier.application.i18n.MessageSourceHolder;
+import br.gov.mutants.verifier.application.exceptions.InvalidMatrixException; //TODO coupling
+import br.gov.mutants.verifier.application.i18n.MessageSourceHolder; //TODO coupling
 import br.gov.mutants.verifier.infrastructure.aid.GeneticMatrixHelper;
 import br.gov.mutants.verifier.domain.entity.Individual;
 import br.gov.mutants.verifier.domain.logics.business.IBusinessLogic;
